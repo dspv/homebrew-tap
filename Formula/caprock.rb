@@ -29,6 +29,7 @@ class Caprock < Formula
 
   def install
     bin.install "caprock"
+    bin.install "caprock-hook"
   end
 
   def caveats
