@@ -1,4 +1,4 @@
-# This file mirrors the GoReleaser-generated cask for v0.3.0 as a formula.
+# This file mirrors the GoReleaser-generated formula for v0.4.0.
 # From the next release on, GoReleaser regenerates it — do not edit by hand.
 class Caprock < Formula
   desc "Mission control for Claude Code — watch, control and orchestrate your sessions"
@@ -7,23 +7,23 @@ class Caprock < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/dspv/caprock/releases/download/v0.3.0/caprock_0.3.0_darwin_amd64.tar.gz"
-      sha256 "581dfa001100a9a77b88a54ae8377f5e8e4719058c907787c0a339a3a561a91e"
+      url "https://github.com/dspv/caprock/releases/download/v0.4.0/caprock_0.4.0_darwin_amd64.tar.gz"
+      sha256 "631538b636d61e171a6b8e22179cc49e34276e3e3bd8b149de15b046e3e0572e"
     end
     on_arm do
-      url "https://github.com/dspv/caprock/releases/download/v0.3.0/caprock_0.3.0_darwin_arm64.tar.gz"
-      sha256 "e2648c054ad3c2f5f120821b2f15e18cc8e35dc620bb637c61a21d197e75aab7"
+      url "https://github.com/dspv/caprock/releases/download/v0.4.0/caprock_0.4.0_darwin_arm64.tar.gz"
+      sha256 "7539fa9bd81e247481b6659ab4c73b5d5cb9d05788ce8bac06ba94b9871d6e79"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/dspv/caprock/releases/download/v0.3.0/caprock_0.3.0_linux_amd64.tar.gz"
-      sha256 "ecb58b1627257f74b4f71bfe40ab7a27b6d8be67f128a1587f1e907109124ded"
+      url "https://github.com/dspv/caprock/releases/download/v0.4.0/caprock_0.4.0_linux_amd64.tar.gz"
+      sha256 "98924607354a3a6d2b25ecfb43e021f9718a127ff72a7165f56433846ddae190"
     end
     on_arm do
-      url "https://github.com/dspv/caprock/releases/download/v0.3.0/caprock_0.3.0_linux_arm64.tar.gz"
-      sha256 "56686fb92f5fc2a3ad39dade6bdb684ae297e9b50e5cee51ac48d59732379018"
+      url "https://github.com/dspv/caprock/releases/download/v0.4.0/caprock_0.4.0_linux_arm64.tar.gz"
+      sha256 "152ccfdfa37b3ea5e0bbda058740b7bbff7e1b0ef0db433357db2c2d19f802f2"
     end
   end
 
