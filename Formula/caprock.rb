@@ -11,7 +11,7 @@ class Caprock < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/dspv/caprock/releases/download/v0.31.1/caprock_0.31.1_darwin_amd64.tar.gz"
-      sha256 "1e27051975019ddbaca6dcf09269f631da4a7f7feaea4a5d8e719e9947ac514a"
+      sha256 "7d4199300ccdd761642566f9ce63d4fc9700c7b2d87bf5df09a2a7d9fa22ec66"
 
       define_method(:install) do
         bin.install "caprock"
@@ -20,7 +20,7 @@ class Caprock < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/dspv/caprock/releases/download/v0.31.1/caprock_0.31.1_darwin_arm64.tar.gz"
-      sha256 "b5039c6832c0a8582a375c6c4c1cce5732a81d2896afbb14644f2b9ed6ceb25e"
+      sha256 "aff25f5f81fec0985577cfb4cf87fe0610a69b5d6260ac907a2dae766b029376"
 
       define_method(:install) do
         bin.install "caprock"
@@ -32,7 +32,7 @@ class Caprock < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/dspv/caprock/releases/download/v0.31.1/caprock_0.31.1_linux_amd64.tar.gz"
-      sha256 "fb6894556c4b67f6d793a66ef8f2c8cf37d202f1195923619bce7b79e023247d"
+      sha256 "ab232a212325134d1c99d68316273b10264c80fd0d1204bae35b79861cc070b3"
       define_method(:install) do
         bin.install "caprock"
         bin.install "caprock-hook"
@@ -40,7 +40,7 @@ class Caprock < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/dspv/caprock/releases/download/v0.31.1/caprock_0.31.1_linux_arm64.tar.gz"
-      sha256 "c4cdf2088cff5c0d593274fc51d7ea86b95c5aac73af7535884cb91c566e3b71"
+      sha256 "65bd84e5915263f1be12917aa93b28b9fd20bc1a33db4f68f668b7dda6c147ff"
       define_method(:install) do
         bin.install "caprock"
         bin.install "caprock-hook"
