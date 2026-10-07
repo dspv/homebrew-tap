@@ -1,8 +1,8 @@
 # Rendered by scripts/app-release.sh for each tag; edit the template in
 # dspv/caprock (app/packaging/caprock-app.rb.tmpl), not this file.
 cask "caprock-app" do
-  version "0.79.0"
-  sha256 "a9e8677eb1c965ba2981090376360d051c2b400d449d61ccec53913bbb31d787"
+  version "0.80.0"
+  sha256 "c0fab9089c8a9aeadc0d902deb969e8333273c1c667048e2aeef2985e903e0f1"
 
   url "https://github.com/dspv/caprock/releases/download/v#{version}/Caprock_#{version}_universal.dmg"
   name "Caprock"
@@ -13,6 +13,11 @@ cask "caprock-app" do
     url :url
     strategy :github_latest
   end
+
+  # The app updates itself in one click (F20, ADR-042): a signed bundle
+  # verified against the key built into it. `brew upgrade` leaves a cask
+  # that says so alone unless asked with --greedy, so the two never fight.
+  auto_updates true
 
   depends_on macos: :ventura
 
