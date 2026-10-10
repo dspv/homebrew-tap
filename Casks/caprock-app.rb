@@ -1,8 +1,8 @@
 # Rendered by scripts/app-release.sh for each tag; edit the template in
 # dspv/caprock (app/packaging/caprock-app.rb.tmpl), not this file.
 cask "caprock-app" do
-  version "0.97.0"
-  sha256 "b7943b9a1edfac5f9cd517b861653f495de99daed8d1dc40c9fbc546691b91fd"
+  version "0.98.0"
+  sha256 "ceec93f49aeddd41f8106a26c74554212e890c24a3a04f1dc8c961a113d22ac3"
 
   url "https://github.com/dspv/caprock/releases/download/v#{version}/Caprock_#{version}_universal.dmg"
   name "Caprock"
