@@ -1,8 +1,13 @@
 # Rendered by scripts/app-release.sh for each tag; edit the template in
 # dspv/caprock (app/packaging/caprock-app.rb.tmpl), not this file.
+#
+# The template carries two variants of what differs between a notarized
+# build and one that is not, each between comment lines `>>> notarized` and
+# `<<< notarized` (or `unnotarized`); app-release.sh keeps the one that
+# matches the build and removes the other, and the marker lines with them.
 cask "caprock-app" do
-  version "0.141.0"
-  sha256 "215ce4d389fbcbcb2c73d4b7f300d42d4803ba686426afc4343a1e606849597d"
+  version "0.142.0"
+  sha256 "9bf7e0888de56e6551d3810f81e757c3755327c2886b71d05628f1927ef19fbb"
 
   url "https://github.com/dspv/caprock/releases/download/v#{version}/Caprock_#{version}_universal.dmg"
   name "Caprock"
@@ -23,17 +28,6 @@ cask "caprock-app" do
 
   app "Caprock.app"
 
-  # The app is ad-hoc signed, not notarized (no Apple Developer ID yet), so
-  # Gatekeeper would refuse the first launch and every upgrade. Homebrew has
-  # already checked the download against the sha256 above; clear the
-  # quarantine flag so Caprock opens like any other app. Drop this once the
-  # build is signed and notarized.
-  postflight_steps do
-    run "/usr/bin/xattr",
-        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/Caprock.app"],
-        writable_paths: ["{{appdir}}/Caprock.app"]
-  end
-
   uninstall quit: "dev.caprock.app"
 
   # The data directory (~/Library/Application Support/caprock) holds the
@@ -48,10 +42,6 @@ cask "caprock-app" do
   ]
 
   caveats <<~EOS
-    Caprock is not notarized yet. This cask clears the download's quarantine
-    flag so the app opens normally; if macOS still refuses it, open
-    System Settings > Privacy & Security and click "Open Anyway".
-
     The app bundles the daemon from the same release. If the caprock formula
     is installed (brew install dspv/tap/caprock), the app starts that one
     instead, and `brew upgrade caprock` keeps it current.
