@@ -6,8 +6,8 @@
 # `<<< notarized` (or `unnotarized`); app-release.sh keeps the one that
 # matches the build and removes the other, and the marker lines with them.
 cask "caprock-app" do
-  version "0.165.0"
-  sha256 "9cc696583d5bea371e23681646ba4727d59672cbb13dc8f556aefbb83b7062df"
+  version "0.165.1"
+  sha256 "624f4632fb957d7f7dcdb4d562c2276089f721fbc0dfd495f55ceb96131294b8"
 
   url "https://github.com/dspv/caprock/releases/download/v#{version}/Caprock_#{version}_universal.dmg"
   name "Caprock"
