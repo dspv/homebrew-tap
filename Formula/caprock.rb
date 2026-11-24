@@ -5,13 +5,13 @@
 class Caprock < Formula
   desc "Mission control for Claude Code — watch, control and orchestrate your sessions"
   homepage "https://caprock.dev"
-  version "0.194.1"
+  version "0.194.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dspv/caprock/releases/download/v0.194.1/caprock_0.194.1_darwin_amd64.tar.gz"
-      sha256 "746b839b5a776ffbcd53f1ad2dcb9af96c695efa6fa8e184e1b53ccd1eb265a8"
+      url "https://github.com/dspv/caprock/releases/download/v0.194.2/caprock_0.194.2_darwin_amd64.tar.gz"
+      sha256 "8bad2361c8a10c6d3534e022e932794329e0ca9b780a8a529e36e04192117d48"
 
       define_method(:install) do
         bin.install "caprock"
@@ -20,8 +20,8 @@ class Caprock < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dspv/caprock/releases/download/v0.194.1/caprock_0.194.1_darwin_arm64.tar.gz"
-      sha256 "bb32beec6d3fc6606f2cc2f45daf40c938a6c7172d192f58f4e70858c1896941"
+      url "https://github.com/dspv/caprock/releases/download/v0.194.2/caprock_0.194.2_darwin_arm64.tar.gz"
+      sha256 "2bad6081d628eef7ee0e3d71e488c861da52a24639f6fa1f4f4553c38b5e0fd2"
 
       define_method(:install) do
         bin.install "caprock"
@@ -33,8 +33,8 @@ class Caprock < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dspv/caprock/releases/download/v0.194.1/caprock_0.194.1_linux_amd64.tar.gz"
-      sha256 "198becf4b109baa00a2dcfbf563271db8dd135ddf67fc35ef8818d60d056e555"
+      url "https://github.com/dspv/caprock/releases/download/v0.194.2/caprock_0.194.2_linux_amd64.tar.gz"
+      sha256 "15b847034e9b89235a1db629da186c3392eb7da815b14fb54d6c56d882e62ba7"
       define_method(:install) do
         bin.install "caprock"
         bin.install "caprock-hook"
@@ -42,8 +42,8 @@ class Caprock < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dspv/caprock/releases/download/v0.194.1/caprock_0.194.1_linux_arm64.tar.gz"
-      sha256 "ec7e7f554a02d53f78ec54a3d4f6f5b42f89808e998c7832295f56bc316fabfd"
+      url "https://github.com/dspv/caprock/releases/download/v0.194.2/caprock_0.194.2_linux_arm64.tar.gz"
+      sha256 "f66e1cb621df38ba361407f6e02bc5a8f0872e433a675681a400a7c47b409c85"
       define_method(:install) do
         bin.install "caprock"
         bin.install "caprock-hook"
